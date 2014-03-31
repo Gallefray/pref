@@ -16,8 +16,10 @@ compinit
 autoload -U promptinit && promptinit 
 #prompt walters  
 prompt fire
-alias irssi="screen irssi"
-alias irssi_ns="irssi"
+if (( $+commands[screen] )) ; then
+	alias irssi="screen irssi"
+	alias irssi_ns="irssi"
+fi
 alias ls='ls --color=auto' 
 alias lsa='ls -lha --color=auto' 
 alias lynx='lynx https://www.duckduckgo.com/'
@@ -25,10 +27,10 @@ alias X='exit'
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
+export WORDCHARS='*?_[]~=&;!#$%^(){}'
 typeset -A key
 
 key[Home]=${terminfo[khome]}
-
 key[End]=${terminfo[kend]}
 key[Insert]=${terminfo[kich1]}
 key[Delete]=${terminfo[kdch1]}
@@ -50,6 +52,8 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[Right]}"    ]]  && bindkey  "${key[Right]}"    forward-char
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"   beginning-of-buffer-or-history
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
+bindkey ';5D' emacs-backward-word
+bindkey ';5C' emacs-forward-word
 
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.

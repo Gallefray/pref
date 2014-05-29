@@ -19,11 +19,16 @@ prompt fire
 if (( $+commands[screen] )) ; then
 	alias irssi="screen irssi"
 	alias irssi_ns="irssi"
+	alias vim="screen vim"
+	alias vi="screen vim"
+	alias vim_ns="vim"
+	alias vi_ns="vim"
 fi
 alias ls='ls --color=auto' 
 alias lsa='ls -lha --color=auto' 
 alias lynx='lynx https://www.duckduckgo.com/'
 alias X='exit'
+# alias x='startx'
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo

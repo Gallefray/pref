@@ -1,13 +1,10 @@
 syntax on
-<<<<<<< HEAD
 colorscheme desert
-=======
 " ^ <3 Syntax Highlighting
 
 set colorscheme=desert
 " ^ Best highlighting for C in gVim aside from :colorscheme blue (I'm evil >:3)
 
->>>>>>> ad4511733e898c8e408243e60bbb05845d3ce790
 set wrap
 " ^ EVERYONE LOVES WRAP! /o/  \o\ \o/ WOOOOOO!!
 

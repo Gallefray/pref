@@ -1,5 +1,5 @@
 syntax on
-g:set colorscheme=desert
+colorscheme desert
 set wrap
 set tabstop=4 shiftwidth=4 softtabstop=4
 set guioptions=T

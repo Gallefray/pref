@@ -27,8 +27,8 @@ au BufRead,BufNewFile *.asm set ft=nasm
 set hls ic 
 " ^ highlight all of the search terms, and have case-insensetive pattern matching 
 
-command csp execute ":let @/ = """
+ab csp let @/ = ""
 " ^ Clear the search pattern because the highlighting is annoyingwhen you're done with it
 
-command bufs execute ":buffers"
+ab bufs buffers
 " ^ Sick and tired of having :bdel :buf but not :bufs >.>

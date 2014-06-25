@@ -2,7 +2,7 @@ syntax on
 colorscheme desert
 " ^ <3 Syntax Highlighting
 
-set colorscheme=desert
+colorscheme desert
 " ^ Best highlighting for C in gVim aside from :colorscheme blue (I'm evil >:3)
 
 set wrap
